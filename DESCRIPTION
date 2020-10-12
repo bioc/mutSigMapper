@@ -1,0 +1,19 @@
+Package: mutSigMapper
+Type: Package
+Title: Mapping Spectra to Mutational Signatures Based on Shot-Noise Modeling
+Version: 0.99.0
+Date: 2020-10-05
+Authors@R: c(person("Julian","Candia",email="julian.candia@nih.gov",role = c("aut", "cre"),comment = c(ORCID = "0000-0001-5793-8989")))
+Depends: R (>= 4.0)
+biocViews: Genetics, SomaticMutation
+Imports: deconstructSigs, MutationalPatterns, gplots, RColorBrewer,stats, graphics,  
+         methods, grDevices, Matrix
+Description: mutSigMapper aims to resolve a critical shortcoming of existing software for mutational signature analysis, namely that of finding parsimonious and biologically plausible exposures. By implementing a shot-noise-based model to generate spectral ensembles, this package addresses this gap and provides a quantitative, non-parametric assessment of statistical significance for the association between mutational signatures and observed spectra.
+URL: https://github.com/juliancandia/mutSigMapper
+License: GPL-3
+LazyData: true
+LazyLoad: yes
+NeedsCompilation: no
+
+
+

@@ -1,0 +1,7 @@
+\documentclass{article}
+\usepackage{pdfpages}
+%\VignetteIndexEntry{mutSigMapper}
+
+\begin{document}
+\includepdf[pages=-, fitpaper=true]{mutSigMapper_vignette.pdf}
+\end{document}

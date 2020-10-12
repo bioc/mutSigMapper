@@ -1,0 +1,10 @@
+export(mutSigMapper,print.mutSigMapper,plotSpectraCaterpillar,
+plotSpectraHeatmap,export)
+
+import(deconstructSigs, MutationalPatterns, RColorBrewer,
+stats, graphics, methods, grDevices, Matrix)
+
+importFrom("gplots","heatmap.2", "redgreen")
+
+S3method("print","mutSigMapper")
+
