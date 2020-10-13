@@ -57,8 +57,8 @@ mutSigMapper_MutationalPatterns = function(spectra, sig, n_rdm, noise, neg.binom
     counts = weights
     counts_rdm = weights_rdm
     for (i_sample in 1:n_sample) {
-        weights[[i_sample]] = weights[[i_sample]]/sum(weights[[i_sample]])        
-        weights_rdm[[i_sample]] = weights_rdm[[i_sample]]/rowSums(weights_rdm[[i_sample]])
+        weights[[i_sample]] = weights[[i_sample]]/max(sum(weights[[i_sample]]),1)
+        weights_rdm[[i_sample]] = weights_rdm[[i_sample]]/pmax(rowSums(weights_rdm[[i_sample]]),1)
         map_pval[,i_sample] = (apply(weights_rdm[[i_sample]]<=signature.cutoff,2,sum)+1)/(n_rdm+1)
     }
     list(spectra=spectra_input, sig=sig_input, method="MutationalPatterns", sig.bkg.adj=sig.bkg.adj, 
